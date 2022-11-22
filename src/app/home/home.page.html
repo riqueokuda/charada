@@ -1,0 +1,16 @@
+<div class="fundo">
+    <div class="conteudo" [class.puff-in-center]="animacao">
+        <div class="pergunta">{{pergunta}} <br><br></div>
+
+        <ion-button id="btnResposta" (click)="MostrarResposta()">
+        RESPOSTA
+        </ion-button>
+        <div class="resposta" [class.esconder]="esconder">—{{resposta}}</div>
+    </div>
+</div>
+
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="solicitarPergunta()">
+        <ion-icon name="refresh"></ion-icon>
+    </ion-fab-button>
+</ion-fab>
